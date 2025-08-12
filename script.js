@@ -1,14 +1,3 @@
-// console.log("Hello, World!");
-// let n = 5;
-// let f = 0;
-// console.log(n/f);
-
-// let name = "eyoal";
-// let age = 21;
-
-// console.log(`My name is ${name} and i am ${age} years old`)
-
-
 const rockBtn = document.querySelector('#rock');
 const paperBtn = document.querySelector('#paper');
 const scissorsBtn = document.querySelector('#scissors');
@@ -34,7 +23,7 @@ function playerChoice(choice) {
     if (result === "You win!") {
         playerScore++;
     } else if (result === "Its a tie!") {
-        // No score change
+        return;
     } else {
         computerScore++;
     }
@@ -61,3 +50,9 @@ function determineWinner(playerChoice, computerChoice){
 rockBtn.addEventListener('click', () => playerChoice('rock'));
 paperBtn.addEventListener('click',() => playerChoice('paper'));
 scissorsBtn.addEventListener('click', () => playerChoice('scissors'));
+
+const container = document.querySelector('#container');
+const content = document.createElemenet("div");
+content.classList.add("content");
+content.textContent = 'This is a content div';
+container.appendChild(content);
